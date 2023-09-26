@@ -1,0 +1,21 @@
+<!-- app.component.html -->
+<div class="game-container">
+  <div class="grid">
+    <div
+      class="cell"
+      *ngFor="let cell of cells"
+      [ngClass]="{
+        'neutral': cell.state === 'neutral',
+        'active': cell.state === 'active',
+        'user': cell.state === 'user',
+        'destroy': cell.state === 'destroy'
+      }"
+      (click)="cellClicked(cell)"
+    ></div>
+  </div>
+  <button class="start-button" (click)="startGame(1000)">Почати</button>
+  <div class="score">
+    <div class="user-score">Гравець: {{ userScore }}</div>
+    <div class="computer-score">Комп'ютер: {{ computerScore }}</div>
+  </div>
+</div>

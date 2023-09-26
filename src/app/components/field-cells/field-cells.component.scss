@@ -1,0 +1,40 @@
+/* app.component.scss */
+.game-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-gap: 5px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.neutral {
+  background-color: blue;
+}
+
+.active {
+  background-color: yellow;
+}
+
+.user {
+  background-color: green;
+}
+
+.destroy {
+  background-color: red;
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+}
